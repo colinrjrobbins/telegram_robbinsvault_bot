@@ -5,10 +5,12 @@ from modules.commands import Commands
 initial = Initialization()
 updater = initial.create_updater()
 dispatcher = initial.create_dispatcher(updater)
+username, password = initial.initial_db_create()
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
-command = Commands(dispatcher)
+command = Commands(dispatcher, username, password)
 
-while True:
-    updater.start_polling()
+updater.start_polling()
+
+updater.idle()
