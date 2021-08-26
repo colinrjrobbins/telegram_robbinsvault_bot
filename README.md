@@ -15,7 +15,8 @@ Designed for control over a basic server at home, or any other system.
 - Update database for users and logging to a remote database as a pose to a local .json file (Currently using TinyDB for testing purposes).
 
 ## Ignored Files for Privacy ##
-Folder [ configuration ]
+Folder - configuration
+
     - config.ini
 ```
     [Telegram]
@@ -24,5 +25,6 @@ Folder [ configuration ]
     [TinyDB]
     setup = False / True
 ```
+
     - db.json 
         - file should be created automatically if setup is set to false
