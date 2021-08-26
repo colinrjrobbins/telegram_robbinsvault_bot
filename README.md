@@ -13,3 +13,16 @@ Designed for control over a basic server at home, or any other system.
 - Adding a watchdog system to let me know when files have moved in certain directories.
 - Add different users, if classified as a moderator account.
 - Update database for users and logging to a remote database as a pose to a local .json file (Currently using TinyDB for testing purposes).
+
+## Ignored Files for Privacy ##
+Folder [ configuration ]
+    - config.ini
+```
+    [Telegram]
+    token=blahblahblah
+
+    [TinyDB]
+    setup = False / True
+```
+    - db.json 
+        - file should be created automatically if setup is set to false
