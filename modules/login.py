@@ -2,7 +2,6 @@ from telegram.ext import CommandHandler
 from telegram.ext import MessageHandler, Filters
 from telegram.ext import ConversationHandler
 from modules.commands import Commands
-import socket
 
 class Login:
     def __init__(self, dispatcher, username, password):

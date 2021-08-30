@@ -10,6 +10,8 @@ import socket
 
 # command to watchdog files and send notifications when files are added or removed
 
+# command to add custom users, on boot add their own passwords (have moderators and users)
+
 # class to allow for login
 
 class Commands:
