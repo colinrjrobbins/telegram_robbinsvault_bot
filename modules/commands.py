@@ -21,6 +21,8 @@ class Commands:
         self.__dispatcher.add_handler(self.__info_handler)
         self.__ip_address_handler = CommandHandler('ipadd', self.getip)
         self.__dispatcher.add_handler(self.__ip_address_handler)
+        self.__docker_handler = CommandHandler('docker', self.getdocker)
+        self.__dispatcher.add_handler(self.__docker_handler)
         self.__logout_handler = CommandHandler('logout', self.kill)
         self.__dispatcher.add_handler(self.__logout_handler)
         self.username = ""
@@ -41,6 +43,7 @@ class Commands:
                                      text="Welcome to RobbinsVault, "+\
                                           "please enter a command.\n\n" +\
                                           "/info  - Show Help Options\n" +\
+                                          "/docker - Show Docker Containers\n" +\
                                           "/ipadd  - Get the system IP Address\n"+\
                                           "/logout - Logout of the system.")
 
@@ -58,3 +61,6 @@ class Commands:
                 st.close()
             context.bot.send_message(chat_id=update.effective_chat.id, 
                                     text=IP)
+
+    def getdocker(self,update,context):
+        pass
